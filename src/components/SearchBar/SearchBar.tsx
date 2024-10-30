@@ -1,4 +1,4 @@
-import { Field, Form, Formik, ErrorMessage } from 'formik';
+import { Field, Form, Formik, ErrorMessage, FormikHelpers } from 'formik';
 import { Toaster } from 'react-hot-toast';
 import { warning } from '../ErrorMessage/ErrorMessage';
 import s from '../SearchBar/SearchBar.module.css';
@@ -12,7 +12,7 @@ interface SearchBarProps {
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const handleSubmit = (values: FormValues, actions: any) => {
+  const handleSubmit = (values: FormValues, actions: FormikHelpers<FormValues>) => {
     if (values.query === '') {
       warning();
       return;
