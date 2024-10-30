@@ -1,16 +1,7 @@
 import Modal from 'react-modal';
 import s from '../ImageModal/ImageModal.module.css';
-
-interface Photo {
-  id: string;
-  description: string | null;
-  urls: {
-    small: string;
-    regular: string;
-  };
-  likes: number;
-}
-
+import { Photo } from '../interfaces'
+ 
 interface ImageModalProps {
   isOpen: boolean;
   image: Photo | null;

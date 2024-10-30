@@ -8,19 +8,7 @@ import ImageModal from '../ImageModal/ImageModal';
 import Modal from 'react-modal';
 import Loader from '../Loader/Loader';
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
-
-interface Photo {
-  id: string;
-  alt_description: string | null;
-  urls: {
-    small: string;
-    regular: string;
-  };
-}
-
-interface FetchGalleryResponse {
-  results: Photo[];
-}
+import { Photo, FetchGalleryResponse } from '../interfaces'
 
 function App() {
   const [query, setQuery] = useState<string>('');
@@ -33,7 +21,7 @@ function App() {
 
   Modal.setAppElement('#root');
 
-  useEffect(() => {
+  useEffect(() => { 
     if (query === '') {
       return;
     }

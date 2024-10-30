@@ -5,6 +5,12 @@ export interface Photo {
         small: string;
         regular: string;
     };
-    likes?: number;
+    likes: number;
     alt_description?: string | null;
+}
+
+export interface FetchGalleryResponse {
+    results: Photo[];
+    total: number;
+    total_pages: number;
 }
