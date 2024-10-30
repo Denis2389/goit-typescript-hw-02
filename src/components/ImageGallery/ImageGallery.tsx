@@ -1,15 +1,7 @@
 import ImageCard from "../ImageCard/ImageCard";
 import s from '../ImageGallery/ImageGallery.module.css';
+import { Photo } from '../interfaces';
 
-// Интерфейс для пропсов компонента `ImageGallery`
-interface Photo {
-  id: string;
-  description: string | null;
-  urls: {
-    small: string;
-    regular: string;
-  };
-}
 
 interface ImageGalleryProps {
   gallery: Photo[];
